@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internships | Virtual Internship Finder</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>🌐 Virtual Internship Finder</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="internships.html">Internships</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <section class="internships-section">
+    <h2>Available Internships</h2>
+    <div id="internshipList" class="internship-container">
+      <!-- Cards dynamically inserted by JS -->
+    </div>
+  </section>
+
+  <footer>
+    <p>Made with ❤️ by Shivangi Maurya</p>
+  </footer>
+
+  <script>
+    // Load internships from localStorage
+    const internships = JSON.parse(localStorage.getItem("filteredInternships"));
+
+    const container = document.getElementById("internshipList");
+
+    if (internships && internships.length > 0) {
+      internships.forEach((intern) => {
+        const card = document.createElement("div");
+        card.classList.add("internship-card");
+        card.innerHTML = `
+          <h3>${intern.title}</h3>
+          <p><strong>Company:</strong> ${intern.company}</p>
+          <p><strong>Duration:</strong> ${intern.duration}</p>
+          <p><strong>Type:</strong> ${intern.type}</p>
+          <p><strong>Skills:</strong> ${intern.skills}</p>
+          <a href="${intern.applyLink}" target="_blank" class="apply-btn">Apply Now</a>
+        `;
+        container.appendChild(card);
+      });
+    } else {
+      container.innerHTML = "<p>No internships found for your search 😔</p>";
+    }
+  </script>
+</body>
+</html>

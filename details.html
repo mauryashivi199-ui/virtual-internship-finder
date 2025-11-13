@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internship Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Internship Details</h1>
+    <a href="index.html" class="back-btn">← Back to Home</a>
+  </header>
+
+  <div class="details-container">
+    <h2>Frontend Developer Internship</h2>
+    <p><strong>Company:</strong> TechNova Pvt Ltd</p>
+    <p><strong>Location:</strong> Remote</p>
+    <p><strong>Duration:</strong> 3 Months</p>
+    <p><strong>Stipend:</strong> ₹10,000/month</p>
+    <p><strong>Skills Required:</strong> HTML, CSS, JavaScript, React</p>
+    <p><strong>Description:</strong> Work on modern web applications, assist in UI/UX improvements, and collaborate with senior developers.</p>
+    
+    <button class="apply-btn">Apply Now</button>
+  </div>
+
+  <script>
+    document.querySelector('.apply-btn').addEventListener('click', () => {
+      alert('Your application has been submitted successfully!');
+    });
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internship Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Internship Details</h1>
+    <a href="index.html" class="back-btn">← Back to Home</a>
+  </header>
+
+  <div class="details-container">
+    <h2 id="intern-title">Web Development Intern</h2>
+    <p><strong>Company:</strong> <span id="intern-company">TechSpark</span></p>
+    <p><strong>Location:</strong> <span id="intern-location">Remote</span></p>
+    <p><strong>Duration:</strong> <span id="intern-duration">3 Months</span></p>
+    <p><strong>Stipend:</strong> <span id="intern-stipend">₹5000/month</span></p>
+
+    <button id="applyBtn">Apply Now</button>
+  </div>
+
+  <script>
+    // URL se internship details lene ke liye
+    const params = new URLSearchParams(window.location.search);
+    const title = params.get("title");
+    const company = params.get("company");
+    const location1 = params.get("location");
+    const duration = params.get("duration");
+    const stipend = params.get("stipend");
+
+    // Page par show karne ke liye
+    if (title) document.getElementById("intern-title").textContent = title;
+    if (company) document.getElementById("intern-company").textContent = company;
+    if (location1) document.getElementById("intern-location").textContent = location1;
+    if (duration) document.getElementById("intern-duration").textContent = duration;
+    if (stipend) document.getElementById("intern-stipend").textContent = stipend;
+
+    // Apply button click hone par alert
+    document.getElementById("applyBtn").addEventListener("click", () => {
+  window.location.href = "apply.html";
+});
+
+  </script>
+</body>
+</html>

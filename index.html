@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Virtual Internship Finder</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+</head>
+<body>
+  <nav class="navbar animate__animated animate__fadeInDown">
+  <div class="logo">Internify</div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#internships">Internships</a></li>
+    <li><a href="apply.html">Apply</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+  <header class="animate__animated animate__fadeInDown">
+  <h1>Virtual Internship Finder</h1>
+</header>
+
+
+  <section class="hero">
+    <h2>Find Your Perfect Internship</h2>
+    <p>Enter your skills and explore the best virtual internships available!</p>
+
+  <div class="search-box animate__animated animate__zoomIn">
+
+  <input type="text" id="searchInput" placeholder="Search internship (e.g. Python, Web, UI)">
+  <button id="searchBtn">Search</button>
+</div>
+
+<div class="internship-list"></div>
+
+  </section>
+
+  <footer>
+    <p>Made with ❤️ by Shivangi Maurya</p>
+  </footer>
+<!-- Apply Form Popup -->
+<div id="applyPopup" class="popup">
+  <div class="popup-content">
+    <span class="close-btn" id="closePopup">&times;</span>
+    <h2>Apply for Internship</h2>
+    <form id="applyForm">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="file" required>
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
+</div>
+
+  <script src="js/main.js"></script>
+  <script src="script.js"></script>
+  <script src="script.js"></script>
+<footer class="footer animate__animated animate__fadeInUp">
+  <p>© 2025 Internify | Made with 💙 by Shivi</p>
+</footer>
+
+</body>
+</html>
